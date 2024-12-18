@@ -40,6 +40,7 @@ PHONE_NUMBER_TEXT = (
 
 async def verify_lazy_user(user_id: int):
     return user_id in ADMIN 
+
 async def verify_lazy_owner(user_id: int):
     return user_id == OWNER_ID 
 
@@ -149,7 +150,7 @@ async def generate_session(bot, msg):
     if not await db.is_user_exist(lazyid):
         await db.add_user(lazyid)
 
-    if not await verify_lazy_owner(user_id):
+    if not await verify_lazy_owner(lazyid):
         return await msg.reply("⛔ You are not authorized to use this command.")
     
     init = await msg.reply(
