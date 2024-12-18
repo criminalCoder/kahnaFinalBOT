@@ -18,7 +18,7 @@ async def start(client, message):
     user = message.from_user
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id)             
-    txt=f"""👋 Hey {message.from_user.mention}\nɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ ᴀᴜᴛᴏ ᴘᴏsᴛ search ʙᴏᴛ..\n\n<blockquote>♥ ʙᴇʟᴏᴠᴇᴅ ᴏᴡɴᴇʀ <a href='https://telegram.me/'>Kahna S</a></blockquote>"""
+    txt=f"""👋 Hey {message.from_user.mention}\nɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ ᴀᴜᴛᴏ ᴘᴏsᴛ search ʙᴏᴛ..\n\n<blockquote>♥ ʙᴇʟᴏᴠᴇᴅ ᴏᴡɴᴇʀ <a href='https://telegram.me/'>Kahna S</a></blockquote>\n<blockquote>♥ ʙᴇʟᴏᴠᴇᴅ ᴏᴡɴᴇʀ <a href='https://telegram.me/'>Kahna S</a></blockquote>"""
     button=InlineKeyboardMarkup([[
         InlineKeyboardButton("✿.｡:☆ ᴏᴡɴᴇʀ ⚔ ᴅᴇᴠs ☆:｡.✿", callback_data='dev')
         ],[
@@ -29,7 +29,7 @@ async def start(client, message):
         InlineKeyboardButton('ℹ ʜᴇʟᴘ ', callback_data='help')
         ]])
     if START_PIC:
-        await message.reply_photo(START_PIC, caption=txt, reply_markup=button, has_spoiler=True)       
+        await message.reply_photo(START_PIC, caption=txt, reply_markup=button)       
     else:
         await message.reply_text(text=txt, reply_markup=button, parse_mode=enums.ParseMode.HTML,  disable_web_page_preview=True)
 
