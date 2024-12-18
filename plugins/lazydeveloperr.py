@@ -106,8 +106,6 @@ async def connect_session(bot, msg):
         # for any query msg me on telegram - @LazyDeveloperr 👍
         if lazydeveloperrsession.is_connected():
             await db.set_session(user_id, lazydeveloper_string_session)
-            await db.set_api(user_id, api_id)
-            await db.set_hash(user_id, api_hash)
             await bot.send_message(
                 chat_id=msg.chat.id,
                 text="Session started successfully! ✅ \n\nNow simply index your database channel and add all sub-channels 🍿"
@@ -283,8 +281,6 @@ async def generate_session(bot, msg):
     await asyncio.sleep(1)
     try:
         sessionstring = await db.get_session(lazyid)
-        # apiid = await db.get_api(lazyid)
-        # apihash = await db.get_hash(lazyid)
 
         lazydeveloperrsession = TelegramClient(StringSession(sessionstring), api_id, api_hash)
         await lazydeveloperrsession.start()

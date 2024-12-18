@@ -9,7 +9,7 @@ class lazydeveloper(object):
 ╭───────────⍟
 ├🤖 ᴍʏ ɴᴀᴍᴇ : {}
 ├👑 ᴏᴡɴᴇʀ : <a href=https://t.me/_>❤Kanha S🤞</a> 
-├🦋 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://telegram.me/LazyDeveloperr>👩‍💻LazyDeveloperr💘</a> 
+├🦋 ᴅᴇᴠᴇʟᴏᴘᴇʀ :<a href=https://telegram.me/LazyDeveloperr>👩‍💻LazyDeveloper💘</a> 
 ├📕 ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a>
 ├✏️ ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ 3</a>
 ├💾 ᴅᴀᴛᴀ ʙᴀsᴇ : <a href=https://cloud.mongodb.com>ᴍᴏɴɢᴏᴅʙ</a>

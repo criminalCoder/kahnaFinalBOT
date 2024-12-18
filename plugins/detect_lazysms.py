@@ -32,11 +32,14 @@ async def message_handler(client, message):
 
         # Validate and sanitize query
          args = message.text
+         txt = await message.reply(f"**⏳ Searching for links matching:** `{args}` 🔍")
+         
          queryz = await validate_query(args)
-
          if not queryz:
                await message.reply("Please provide a valid search query.")
                return
+         
+         # print(f"Search Query: {queryz}")
 
 # ====================== 💘❤👩‍💻====================================
 #    ==> P O W E R E D - B Y - 🤞 L A Z Y D E V E L O P E  R        |
@@ -44,6 +47,7 @@ async def message_handler(client, message):
          await asyncio.sleep(1)
          sessionstring = await db.get_session(OWNER_ID)
          if sessionstring is None:
+            await txt.delete()
             # msstt h na - 😂 - isiliye copy krne aaye ho 😂 - kr lo - kr lo 
             return await message.reply(
                "Please visit again later. I’m waiting for my owner to initialize me. 😔\n\n"
@@ -58,9 +62,6 @@ async def message_handler(client, message):
          if not Lazyuserbot.is_connected():
             await Lazyuserbot.start()
          # await Lazyuserbot.start()
-
-         print(f"Search Query: {queryz}")
-         txt = await message.reply(f"**Searching for links matching:** `{queryz}` 🔍")
 
 # ====================== 💘❤👩‍💻====================================
 #    ==> P O W E R E D - B Y - 🤞 L A Z Y D E V E L O P E  R        |
@@ -187,8 +188,8 @@ async def message_handler(client, message):
                InlineKeyboardButton(f"How To Open Link ❓", url=f"https://t.me/FilmyflyLinkOpen")
             ],
             [
-               InlineKeyboardButton(f"🪅Request Ch..", url=f"https://t.me/+Aa-zL92bgqQ4OTll"),
-               InlineKeyboardButton(f"♻️Backup Ch..", url=f"https://t.me/AllTypeOfLinkss")
+               InlineKeyboardButton(f"🪅Request", url=f"https://t.me/+Aa-zL92bgqQ4OTll"),
+               InlineKeyboardButton(f"♻️Backup", url=f"https://t.me/AllTypeOfLinkss")
             ],
             [
                InlineKeyboardButton(f"18+  Channel 🔞", url=f"https://t.me/+jt0FTlngGCc3OWI1")
